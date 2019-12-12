@@ -25,7 +25,7 @@ jobs:
             - ~/TribesBackend/.gradle/caches
           key: v1-gradle-cache-{{ checksum "TribesBackend/build.gradle" }}
       - persist_to_workspace:
-          root: .
+          root: ./TribesBackend
           paths:
             - build
   test:
