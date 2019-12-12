@@ -28,7 +28,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - build
+            - TribesBackend/build
   test:
     # Remove if parallelism is not desired
     parallelism: 2
