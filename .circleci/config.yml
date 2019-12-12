@@ -15,14 +15,14 @@ jobs:
           key: v1-gradle-cache-{{ checksum "TribesBackend/build.gradle" }}
       - run:
           name: Install dependencies
-          command: ./gradlew build -x test
+          command: ./TribesBackend/gradlew build -x test
       - save_cache:
           paths:
-            - ~/.gradle/wrapper
+            - ~/TribesBackend/.gradle/wrapper
           key: v1-gradle-wrapper-{{ checksum "TribesBackend/gradle/wrapper/gradle-wrapper.properties" }}
       - save_cache:
           paths:
-            - ~/.gradle/caches
+            - ~/TribesBackend/.gradle/caches
           key: v1-gradle-cache-{{ checksum "TribesBackend/build.gradle" }}
       - persist_to_workspace:
           root: .
