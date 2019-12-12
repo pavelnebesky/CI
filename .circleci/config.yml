@@ -11,12 +11,12 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: v1-gradle-wrapper-{{ checksum "gradle/wrapper/gradle-wrapper.properties" }}
+          key: v1-gradle-wrapper-{{ checksum "TribesBackend/gradle/wrapper/gradle-wrapper.properties" }}
       - restore_cache:
-          key: v1-gradle-cache-{{ checksum "build.gradle" }}
+          key: v1-gradle-cache-{{ checksum "TribesBackend/build.gradle" }}
       - run:
           name: Install dependencies
-          command: ./TribesBackend/gradlew build -x test
+          command: ./TribesBackend/gradlew build
       - save_cache:
           paths:
             - ~/TribesBackend/.gradle/wrapper
