@@ -72,7 +72,7 @@ jobs:
       # This will be empty for all nodes except the first one
       - store_artifacts:
           path: TribesBackend/build/libs
-deploy:
+  deploy:
       - run:
         name: Setup Heroku
         command: |  
